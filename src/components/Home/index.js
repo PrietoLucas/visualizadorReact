@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Navbar,Input,Button,Row,InputGroup,InputGroupAddon,Container,Col,Form,Card, CardImg, CardText, CardBody,CardTitle, CardSubtitle, Spinner} from 'reactstrap';
 import { MdSearch,MdStar } from 'react-icons/md';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 class Home extends Component{
     state = {
@@ -31,6 +32,23 @@ class Home extends Component{
     render(){
         return (
             <>
+
+            <Navbar color="dark">
+            <Container className="d-flex justify-content-center">
+                        <img className="rounded-circle border border-white mr-3" 
+                        width="50"
+                        src="https://www.thispersondoesnotexist.com/image"/>
+
+                        <span className="text-white">
+                            Logado Como 
+                            <Link className="text-white font-weight-bold ml-1" to="/">
+                                { this.props.match.params.usuario }
+                            </Link>
+                        </span>
+            </Container>
+
+            </Navbar>
+
              <Navbar color="dark" fixed="bottom">
                  <Container className="d-flex justify-content-center">
                      <Col xs="12" md="6" >

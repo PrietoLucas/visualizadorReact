@@ -3,13 +3,13 @@ import { BrowserRouter, Switch,Route } from 'react-router-dom';
 import Login from './components/Login';
 import Home from './components/Home';
 
-export default class src extends Component {
+export default class Routes extends Component {
   render() {
     return (
     <BrowserRouter>
     <Switch>
-        <Route path="/" component={Login} />
-        <Route path="/home" component={Home}/>
+        <Route path="/" exact component={Login} />
+        <Route path="/home/:usuario" component={Home}/>
     </Switch>
     </BrowserRouter>
     );
